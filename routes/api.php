@@ -34,7 +34,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Supplementing Resource Controllers
 Route::get('/country/developed', [CountryController::class, 'developed'])->name('country.developed');
-Route::get('/order/{id}/history', [OrderHistoryController::class]);
+//Route::get('/order/{id}/history', [OrderHistoryController::class]);
+
+Route::apiResource('country.cities', CityController::class)->except([
+    'show', 'create', 'store', 'update', 'destroy'
+]);
+Route::apiResource('order.history', OrderHistoryController::class);
 
 Route::apiResources([
     'country' => CountryController::class,
@@ -50,4 +55,4 @@ Route::apiResources([
 ]);
 
 
-Route::resource('country.cities', CityController::class);
+

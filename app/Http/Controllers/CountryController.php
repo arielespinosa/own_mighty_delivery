@@ -42,7 +42,25 @@ class CountryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        //error_log('DATA: ', $data);
+        $country = Country::create($data);
+
+        /*
+        $message = __('message.update_form',[ 'form' => __('message.country') ] );
+		if($country->wasRecentlyCreated){
+			$message = __('message.save_form',[ 'form' => __('message.country') ] );
+		}
+        */
+
+        $response = [
+            'success' => true,
+            'data' => $data,
+            'message' => 'Pais creado',
+        ];
+
+
+        return response()->json($data, 200);
     }
 
     /**
