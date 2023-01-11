@@ -15,6 +15,17 @@ class CreateAppSettingsTable extends Migration
     {
         Schema::create('app_settings', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("email");
+            $table->string("description")->nullable();
+            $table->string("copyright")->nullable();
+            $table->string("facebook_url")->nullable();
+            $table->string("twitter_url")->nullable();
+            $table->string("linkedin_url")->nullable();
+            $table->string("instagram_url")->nullable();
+            $table->string("support_phone_number")->nullable();
+            $table->string("support_email");
+            $table->json('notification_settings')->nullable();
             $table->timestamps();
         });
     }

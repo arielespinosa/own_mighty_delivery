@@ -15,6 +15,9 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->tinyInteger('status')->default('1');
+            $table->boolean('is_required')->default(false);
             $table->timestamps();
         });
     }

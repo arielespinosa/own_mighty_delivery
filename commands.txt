@@ -8,7 +8,7 @@ php artisan make:model Document -mcr
 php artisan make:model ExtraCharge -mcr
 php artisan make:model Notification -mcr
 php artisan make:model Order -mcr
-php artisan make:model OrdetHistory -mcr
+php artisan make:model OrderHistory -mcr
 php artisan make:model Payment -mcr
 php artisan make:model PaymentGateway -mcr
 php artisan make:model StaticData -mcr

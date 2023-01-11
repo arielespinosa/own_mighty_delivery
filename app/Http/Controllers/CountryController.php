@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class CountryController extends Controller
 {
+
+   public function developed()
+   {
+       //
+   }
+
+
     /**
      * Display a listing of the resource.
      *

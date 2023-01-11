@@ -1,12 +1,11 @@
 <?php
 
-use App\Models\User;
 use App\Models\Order;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaymentsTable extends Migration
+class CreateOrderHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,16 +14,13 @@ class CreatePaymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('order_histories', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class)->constrained();
             $table->foreignIdFor(Order::class)->constrained();
             $table->dateTime('datetime')->nullable();
-            $table->double('total_amount')->default('0');
-            $table->string('type');
-            $table->string('txn_id')->nullable();
-            $table->string('status')->nullable()->comment('pending, paid, failed');
-            $table->json('detail')->nullable();
+            $table->string('type')->nullable();
+            $table->string('message')->nullable();
+            $table->json('data')->nullable();
             $table->timestamps();
         });
     }
@@ -36,6 +32,6 @@ class CreatePaymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('order_histories');
     }
 }

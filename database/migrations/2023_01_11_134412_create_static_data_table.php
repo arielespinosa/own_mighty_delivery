@@ -15,6 +15,9 @@ class CreateStaticDataTable extends Migration
     {
         Schema::create('static_data', function (Blueprint $table) {
             $table->id();
+            $table->string('type')->nullable();
+            $table->string('label')->nullable();
+            $table->string('value');
             $table->timestamps();
         });
     }

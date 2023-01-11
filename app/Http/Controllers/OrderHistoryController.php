@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrdetHistory;
+use App\Models\OrderHistory;
 use Illuminate\Http\Request;
 
-class OrdetHistoryController extends Controller
+class OrderHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class OrdetHistoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\OrdetHistory  $ordetHistory
+     * @param  \App\Models\OrderHistory  $orderHistory
      * @return \Illuminate\Http\Response
      */
-    public function show(OrdetHistory $ordetHistory)
+    public function show(OrderHistory $orderHistory)
     {
         //
     }
@@ -52,10 +52,10 @@ class OrdetHistoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\OrdetHistory  $ordetHistory
+     * @param  \App\Models\OrderHistory  $orderHistory
      * @return \Illuminate\Http\Response
      */
-    public function edit(OrdetHistory $ordetHistory)
+    public function edit(OrderHistory $orderHistory)
     {
         //
     }
@@ -64,10 +64,10 @@ class OrdetHistoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\OrdetHistory  $ordetHistory
+     * @param  \App\Models\OrderHistory  $orderHistory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OrdetHistory $ordetHistory)
+    public function update(Request $request, OrderHistory $orderHistory)
     {
         //
     }
@@ -75,10 +75,10 @@ class OrdetHistoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\OrdetHistory  $ordetHistory
+     * @param  \App\Models\OrderHistory  $orderHistory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(OrdetHistory $ordetHistory)
+    public function destroy(OrderHistory $orderHistory)
     {
         //
     }
